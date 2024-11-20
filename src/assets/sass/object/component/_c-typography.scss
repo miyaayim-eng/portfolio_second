@@ -1,0 +1,80 @@
+@use 'global' as *;
+
+.c-headline {
+  width: fit-content;
+
+  &__text {
+    position: relative;
+    display: block;
+    @include font-en;
+    font-weight: 700;
+    font-size: to-rem(48);
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+
+    @include mq(md) {
+      font-size: to-rem(36);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(100% - 4px);
+      left: 50%;
+      translate: -50% 0;
+      width: 56px;
+      height: 4px;
+      border-radius: 100vh;
+      background-color: rgb(var(--color-accent));
+      // border: 1px solid #000;
+    }
+  }
+}
+
+.c-page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 320px;
+  border-bottom: var(--border-solid);
+
+  @include mq(lg) {
+    height: 280px;
+  }
+
+  @include mq(md) {
+    height: 200px;
+  }
+  @include mq(2xs) {
+    height: 160px;
+  }
+
+  &__text {
+    position: relative;
+    display: block;
+    @include font-en;
+    font-weight: 700;
+    font-size: to-rem(56);
+    line-height: 1;
+    text-transform: uppercase;
+    padding-bottom: 0.3em;
+
+    @include mq(md) {
+      font-size: to-rem(48);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(100% - 4px);
+      left: 50%;
+      translate: -50% 0;
+      width: 56px;
+      height: 4px;
+      border-radius: 100vh;
+      background-color: rgb(var(--color-accent));
+    }
+  }
+}

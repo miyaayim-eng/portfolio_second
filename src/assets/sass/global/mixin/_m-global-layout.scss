@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../variables/' as *;
+
+//* -------------------------------------------------------
+//* 'c-inner'で使用するレイアウト調整
+//* -------------------------------------------------------
+@mixin content-inner($size: null) {
+  $max_width: (
+    sm: var(--contents-width-sm),
+    md: var(--contents-width-md),
+    lg: var(--contents-width-lg),
+  ) !default;
+
+  width: calc(100% - var(--body-paddingSide) * 2);
+  @if $size {
+    max-width: #{map.get($max_width, $size)};
+  }
+  margin-inline: auto;
+}
+
+//* -------------------------------------------------------
+//* コンテンツを片方に寄せる
+//* -------------------------------------------------------
+@mixin extra($property, $value, $maxWidthContent) {
+  // 最大幅からはみ出た量を計算
+  #{$property}: calc((var(--vw) - $maxWidthContent) / 2);
+
+  @if str-index(#{$value}, 'px') {
+    $totalValue: $value * 2;
+    $breakpoint: $maxWidthContent + $totalValue;
+    @media (max-width: $breakpoint) {
+      #{$property}: #{$value};
+    }
+  } @else if str-index(#{$value}, '%') {
+    $totalValue: $value * 2;
+    $percent: 100% - $totalValue;
+    $percent_as_number: math.div($percent, 100%);
+    $breakpoint: math.div($maxWidthContent, $percent_as_number);
+    // $breakpoint: $breakpoint + var(--scrollbarWidth);
+    @media (max-width: $breakpoint) {
+      #{$property}: #{$value};
+    }
+  } @else {
+    @error "指定された値、単位が正しくありません。指定できる値、単位は次のとおりです。 => extra(プロパティ名, 最大コンテンツ幅から超えた量の値[px, %], 最大コンテンツ幅)";
+  }
+}

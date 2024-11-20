@@ -1,0 +1,64 @@
+@use 'global' as *;
+
+.c-button {
+  $this: &;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 8px 24px;
+    border: 2px solid currentColor;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    transition-property: color, border-color, background-color;
+  }
+  &.-transparent-black {
+    #{$this}__link {
+      @include hover {
+        color: rgb(var(--color-white));
+        border-color: rgb(var(--color-black));
+        background-color: rgb(var(--color-black));
+      }
+      &.is-active {
+        color: rgb(var(--color-white));
+        border-color: rgb(var(--color-black));
+        background-color: rgb(var(--color-black));
+      }
+    }
+  }
+  &.-transparent-white {
+    #{$this}__link {
+      @include hover {
+        color: rgb(var(--color-black));
+        border-color: rgb(var(--color-white));
+        background-color: rgb(var(--color-white));
+      }
+    }
+  }
+  &.-width-md {
+    max-width: 240px;
+  }
+  &.-width-fit {
+    width: fit-content;
+  }
+
+  &__text {
+    @include font-en;
+    color: currentColor;
+    font-weight: 700;
+    margin-right: auto;
+    word-break: break-all;
+    line-height: 1.3;
+  }
+  &__arrow {
+    width: 12px;
+    margin-left: 24px;
+  }
+  &__icon {
+    width: 18px;
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+}

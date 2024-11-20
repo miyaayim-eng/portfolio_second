@@ -1,0 +1,12 @@
+@use 'global' as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba((var(--color-white)), 0.8);
+  background-color: rgba((var(--color-white)));
+  box-shadow: var(--box-shadow);
+}

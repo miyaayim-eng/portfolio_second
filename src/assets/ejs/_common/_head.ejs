@@ -1,0 +1,13 @@
+<% const title = (pageId === 'home') ? json.pages[pageId].pageTitle : json.pages[pageId].pageTitle + "|" + json.siteInfo.siteTitle -%>
+<% const description = json.pages[pageId].description -%>
+
+<% const pageSlug = (pageId === 'home') ? json.siteInfo.siteDomain + "/" : json.siteInfo.siteDomain + "/" + pageId + "/" -%>
+<% const fullPageURL  = "https://www." + pageSlug -%>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow">
+<title><%= title %></title>
+<meta name="description" content="<%= description %>">
+<link rel="canonical" href="<%= fullPageURL  %>">

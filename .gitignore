@@ -1,0 +1,3 @@
+#gitではnode_modulesとdistを除外する
+*node_modules/
+*dist/

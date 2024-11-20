@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.p-footer {
+  padding: 24px var(--body-paddingSide);
+  background-color: rgb(var(--color-black));
+
+  &__copyright {
+    display: block;
+    text-align: center;
+    color: rgb(var(--color-white));
+
+    @include mq(2xs) {
+      text-align: start;
+    }
+  }
+
+  @include mq(2xs) {
+    padding-right: 64px;
+  }
+}

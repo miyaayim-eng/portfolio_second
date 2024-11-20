@@ -1,0 +1,356 @@
+<% const ROOT = `${process.cwd()}/src/assets/ejs`; -%>
+<%# ページIDを入力する -%>
+<% pageId = 'home'; -%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%# メタデータ等 -%>
+  <%- include(`${ROOT}/_common/_head.ejs`) %>
+
+  <%# CSS -%>
+  <%- include(`${ROOT}/_common/_link.ejs`) %>
+  <%# swiper -%>
+  <link rel="stylesheet" href="/assets/js/main.css">
+
+  <%# JavaScripts -%>
+  <%- include(`${ROOT}/_common/_script.ejs`) %>
+</head>
+
+<body id="<%= pageId %>">
+
+  <%# 共通SVG画像 -%>
+  <%- include(`${ROOT}/_common/_svg.ejs`) %>
+
+  <%# ヘッダー -%>
+  <%- include(`${ROOT}/_common/_header.ejs`) %>
+
+  <%# メイン -%>
+  <main class="l-main">
+
+    <section class="p-home-mv">
+      <div class="p-home-mv__carousel">
+
+        <!-- Slider main container -->
+        <div class="p-home-mv__slider js-swiper" data-swiper="01">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="p-home-mv__slider__item">
+                <img src="/assets/img/top/mv_slide01.webp" alt="" width="2560" height="1707">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="p-home-mv__slider__item">
+                <img src="/assets/img/top/mv_slide02.webp" alt="" width="2542" height="1440">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="p-home-mv__slider__item">
+                <img src="/assets/img/top/mv_slide03.webp" alt="" width="2560" height="1707">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="p-home-mv__slider__item">
+                <img src="/assets/img/top/mv_slide04.webp" alt="" width="2560" height="1440">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <h1 class="p-home-mv__logo-box">
+        <span class="p-home-mv__logo c-logo">
+          <span class="p-home-mv__logo__text c-logo__text -top"><span class="p-home-mv__logo__text__first">y</span><span class="p-home-mv__logo__text__first-not">uya</span></span>
+          <span class="p-home-mv__logo__text c-logo__text -bottom"><span class="p-home-mv__logo__text__first">m</span><span class="p-home-mv__logo__text__first-not">iyashita</span></span>
+        </span>
+      </h1>
+
+    </section>
+
+    <section class="p-home-works">
+      <div class="c-inner-lg">
+
+        <h2 class="p-home-works__headline c-headline u-mx-auto"><span class="c-headline__text js-anime-target" data-anime="show-underLine">works</span></h2>
+
+        <ul class="p-home-works__list js-anime-target" data-anime-parent>
+          <li class="p-home-works__card" data-anime="fadein-top">
+            <a href="/works/#sf6-combo-hub" class="p-home-works__card__link">
+              <figure class="p-home-works__card__container">
+                <div class="p-home-works__card__img">
+                  <img src="/assets/img/works/sf6-combo-maker.webp" alt="SF6 Combo Maker（練習）" width="1920" height="1080">
+                </div>
+                <figcaption class="p-home-works__card__info">
+                  <h3 class="p-home-works__card__title">SF6 Combo Maker <span class="p-home-works__card__title__small u-inline-block">（練習）</span></h3>
+                  <p class="p-home-works__card__desc">人気格闘ゲーム"StreetFighter6"のコンボレシピを共有できるサイトを作成しました。<br>主にNext.js、Supabaseを使用しています。</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="p-home-works__card" data-anime="fadein-top" data-anime-delay="0.2">
+            <a href="/works/#youtube-bgm" class="p-home-works__card__link">
+              <figure class="p-home-works__card__container">
+                <div class="p-home-works__card__img">
+                  <img src="/assets/img/works/youtube_bgm.webp" alt="YouTube BGM（練習）" width="1920" height="1080">
+                </div>
+                <figcaption class="p-home-works__card__info">
+                  <h3 class="p-home-works__card__title">YouTube BGM <span class="p-home-works__card__title__small u-inline-block">（練習）</span></h3>
+                  <p class="p-home-works__card__desc">YouTubeに投稿されたBGMに関する動画をまとめたサイトを作成しました。<br>ビルドツールとしてViteを使用しています。</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="p-home-works__card" data-anime="fadein-top" data-anime-delay="0.4">
+            <a href="/works/#blog" class="p-home-works__card__link">
+              <figure class="p-home-works__card__container">
+                <div class="p-home-works__card__img">
+                  <img src="/assets/img/works/blog.webp" alt="ブログサイト（練習）" width="1920" height="1080">
+                </div>
+                <figcaption class="p-home-works__card__info">
+                  <h3 class="p-home-works__card__title">ブログサイト <span class="p-home-works__card__title__small u-inline-block">（練習）</span></h3>
+                  <p class="p-home-works__card__desc">Jamstackなサイトとして作成したブログサイトです。<br>Next.js、Micro CMSを使用しています。</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="p-home-works__card" data-anime="fadein-top" data-anime-delay="0.6">
+            <a href="/works/#portfolio" class="p-home-works__card__link">
+              <figure class="p-home-works__card__container">
+                <div class="p-home-works__card__img">
+                  <img src="/assets/img/works/portfolio_second.webp" alt="yuya miyashita（当サイト）" width="1920" height="1080">
+                </div>
+                <figcaption class="p-home-works__card__info">
+                  <h3 class="p-home-works__card__title"><span class="u-uppercase">yuya miyashita</span> <span class="p-home-works__card__title__small u-inline-block">（当サイト）</span></h3>
+                  <p class="p-home-works__card__desc">当ポートフォリオサイトです。<br>ビルドは既存のツールを使用せず、npm-scriptsを自分で書いて運用しています。</p>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="p-home-works__button c-button -transparent-black -width-md">
+          <a href="/works/" class="c-button__link">
+            <span class="c-button__text u-uppercase">view more</span>
+            <svg class="c-svg-angle -right c-button__arrow">
+              <use href="#svg-angle-right" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="p-home-about">
+      <div class="p-home-about__text-area">
+        <div class="p-home-about__inner c-inner-md">
+          <div class="p-home-about__headline-box">
+            <h2 class="p-home-about__headline c-headline u-mx-auto"><span class="c-headline__text js-anime-target" data-anime="show-underLine">about</span></h2>
+          </div>
+          <div class="p-home-about__info">
+            <div class="p-home-about__top js-anime-target" data-anime-parent>
+              <div class="p-home-about__me" data-anime="fadein-top">
+                <img src="/assets/img/top/about_me.webp" alt="ミヤシタ　ユウヤ" width="800" height="800">
+              </div>
+              <div class="p-home-about__name-area" data-anime="fadein-top">
+                <h3 class="p-home-about__name u-uppercase">yuya miyashita</h3>
+                <p class="p-home-about__role u-uppercase">web coder</p>
+              </div>
+            </div>
+            <div class="p-home-about__bottom js-anime-target" data-anime-parent>
+              <p class="p-home-about__desc" data-anime="fadein-top">Web制作会社で1年4ヶ月間コーダーとして勤務、現在はスキルアップとしてReactを勉強中。<br>元々はIT業界とは無縁の職業に就いていましたが、自身の適性と将来性を見据え、Webエンジニアへのキャリアチェンジを決意。<br>新たな分野での挑戦を通じて、スキルを磨き続けています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-home-about__image-area">
+        <img src="/assets/img/top/about_bg.webp" alt="" width="1280" height="853">
+      </div>
+    </section>
+
+    <section id="skill" class="p-home-skill">
+      <div class="c-inner-sm">
+
+        <h2 class="p-home-skill__headline c-headline u-mx-auto"><span class="c-headline__text js-anime-target" data-anime="show-underLine">skill</span></h2>
+
+        <div class="p-home-skill__category-container">
+
+          <div class="p-home-skill__category-item js-anime-target" data-anime="fadein-top">
+            <h3 class="p-home-skill__category-headline">フロントエンド開発</h3>
+            <div class="p-home-skill__skill-container">
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">HTML</li>
+                    <li class="p-home-skill__skill-title-item">CSS<span class="p-home-skill__skill-title-item__small"> (Sass)</span></li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_html.svg" alt="HTML" width="512" height="512">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_css.svg" alt="CSS" width="2183" height="2500">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_sass.webp" alt="Sass" width="320" height="320">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">文章構造・SEO対策を考え、適切なマークアップを心がけています。<br>また、インデントのズレやスペースで距離を空けるなど、他人から見ても読みやすいコード作りを意識しています。<br>CSS設計手法では 「FLOCSS」 を取り入れ、保守性の高い設計を目指しています。</p>
+              </div>
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">JavaScript</li>
+                    <li class="p-home-skill__skill-title-item">jQuery</li>
+                    <li class="p-home-skill__skill-title-item">React</li>
+                    <li class="p-home-skill__skill-title-item">TypeScript</;>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_javascript.svg" alt="JavaScript" width="2500" height="2500">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_jquery.svg" alt="jquery" width="128" height="128">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_react.svg" alt="React" width="23" height="20">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_typescript.svg" alt="TypeScript" width="512" height="512">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">実務ではjQueryを使用していましたが、脱jQueryの流れに合わせて外部ライブラリを使用しない純粋なJavaScriptを使用しています。<br>当サイトも、純粋なJavaScriptのみで、「ハンバーガーメニュー」、「スクロールアニメーション」などを実装しています。<br>モダンJavascriptを使用したWeb制作を学ぶためReactを勉強中、Reactを用いたブログサイト、YouTubeまとめサイト、レシピ投稿サイトを作成しました。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="p-home-skill__category-item js-anime-target" data-anime="fadein-top">
+            <h3 class="p-home-skill__category-headline">バックエンド開発</h3>
+            <div class="p-home-skill__skill-container">
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">Node.js</li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_node.svg" alt="Node.js" width="71" height="80">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">Next.jsやVite、自作タスクランナーのJavascript実行環境として使用しています。</p>
+              </div>
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">PHP</li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_php.svg" alt="PHP" width="711" height="384">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">実務にてデータベースの情報をCMSで出力する際に使用しました。<br>条件分岐やループ処理など、基礎部分の経験があります。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="p-home-skill__category-item js-anime-target" data-anime="fadein-top">
+            <h3 class="p-home-skill__category-headline">ビルドツール・<span class="u-inline-block">タスクランナー</span></h3>
+            <div class="p-home-skill__skill-container">
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">npm-scripts</li>
+                    <li class="p-home-skill__skill-title-item">Gulp</li>
+                    <li class="p-home-skill__skill-title-item">Vite</li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_npm.svg" alt="npm-scripts" width="16" height="16">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_gulp.svg" alt="Gulp" width="5105" height="5105">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_vite.svg" alt="Vite" width="410" height="404">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">個人でGulpを使用しWeb開発を行い、その後は既存ツールを使用せずに自作タスクランナーを作成し、基礎部分を学びました。<br>当サイトも自作タスクランナーを用いて制作し、「SCSSからCSSへの変換、ベンダープレフィックス付与、ブラウザリロード、画像圧縮、構文チェック、EJSからHTMLへの変換、JavaScriptのバンドル」等を行っています。。<br>Reactでの開発の際には、Viteを用いて開発を行いました。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="p-home-skill__category-item js-anime-target" data-anime="fadein-top">
+            <h3 class="p-home-skill__category-headline">フレームワーク</h3>
+            <div class="p-home-skill__skill-container">
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">Next.js</li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_nextjs.svg" alt="Next.js" width="180" height="180">
+                    </li>
+                    <li class="p-home-skill__skill-image">
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">Reactでの開発の際に、サーバーサイドレンダリング（SSR）、静的サイト生成（SSG）を実現するために使用しています。<br>パフォーマンスにも優れているため、React開発で主に使用しています。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="p-home-skill__category-item js-anime-target" data-anime="fadein-top">
+            <h3 class="p-home-skill__category-headline">テンプレートエンジン</h3>
+            <div class="p-home-skill__skill-container">
+
+              <div class="p-home-skill__skill-item">
+                <div class="p-home-skill__skill-title-area">
+                  <ul class="p-home-skill__skill-title-list">
+                    <li class="p-home-skill__skill-title-item">EJS</li>
+                  </ul>
+                  <ul class="p-home-skill__skill-image-list">
+                    <li class="p-home-skill__skill-image">
+                      <img src="/assets/img/common/skill_ejs.svg" alt="EJS" width="28" height="16">
+                    </li>
+                  </ul>
+                </div>
+                <p class="p-home-skill__skill-desc">静的ページではEJSを利用して開発するように取り組んでいます。<br>EJSの記法や、データの受け渡し方、復数ページの制作、ループ処理などを学習しました。<br>当サイトでもEJSを利用して開発しています。</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <%# CONTACT -%>
+    <%- include(`${ROOT}/_component/_contact.ejs`) %>
+
+  </main>
+
+  <%# フッター -%>
+  <%- include(`${ROOT}/_common/_footer.ejs`) %>
+
+</body>
+
+</html>

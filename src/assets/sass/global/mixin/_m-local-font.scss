@@ -1,0 +1,188 @@
+@use '../variables/' as *;
+
+// 分類参照 https://tokoton.biz/blog/recommended-google-fonts-for-web-design/#i-12
+// ChatGPT質問用
+// このフォントは、Serif（セリフ体）、Sans Serif（サンセリフ体）、Monospace（等幅フォント）、Display（装飾的なフォント）、Handwriting（手書き風フォント）のどのカテゴリに属しますか？もしくは、これ以外のカテゴリであれば教えて下さい。
+//* =====================================================================
+//* 日本語フォント
+//* =====================================================================
+//* -------------------------------------------------------
+//* Serif（セリフ体）【明朝体】
+//* -------------------------------------------------------
+// @mixin font-noto-serif-jp {
+//   font-family: 'Noto Serif JP', serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-sawarabi-mincho {
+//   font-family: 'Sawarabi Mincho', serif;
+// }
+// @mixin font-shippori-mincho {
+//   font-family: 'Shippori Mincho', serif;
+// }
+// @mixin font-zen-old-mincho {
+//   font-family: 'Zen Old Mincho', serif;
+// }
+// @mixin font-kiwi-maru {
+//   font-family: 'Kiwi Maru', serif;
+// }
+// @mixin font-zen-maru-gothic {
+//   font-family: 'Zen Maru Gothic', serif;
+// }
+//* -------------------------------------------------------
+//* Sans Serif（サンセリフ体）【ゴシック体】
+//* -------------------------------------------------------
+// @mixin font-noto-sans-jp {
+//   font-family: 'Noto Sans JP', sans-serif;
+//   font-optical-sizing: auto;
+// }
+@mixin font-m-plus-1 {
+  font-family: 'M PLUS 1', sans-serif;
+  font-optical-sizing: auto;
+}
+// @mixin font-m-plus-2 {
+//   font-family: 'M PLUS 2', sans-serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-m-plus-rounded-1c {
+//   font-family: 'M PLUS Rounded 1c', sans-serif;
+// }
+// @mixin font-sawarabi-gothic {
+//   font-family: 'Sawarabi Gothic', sans-serif;
+// }
+// @mixin font-zen-kaku-gothic-new {
+//   font-family: 'Zen Kaku Gothic New', sans-serif;
+// }
+
+//* -------------------------------------------------------
+//* Display（装飾的なフォント）
+//* -------------------------------------------------------
+//* -------------------------------------------------------
+//* Handwriting（手書き風フォント）
+//* -------------------------------------------------------
+
+//* =====================================================================
+//* 欧米フォント
+//* =====================================================================
+//* -------------------------------------------------------
+//* Serif（セリフ体）【明朝体】
+//* -------------------------------------------------------
+// @mixin font-cormorant-garamond {
+//   font-family: 'Cormorant Garamond', serif;
+// }
+// @mixin font-roboto-slab {
+//   font-family: 'Roboto Slab', serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-lato {
+//   font-family: 'Lato', sans-serif;
+//   font-optical-sizing: auto;
+// }
+//* -------------------------------------------------------
+//* Sans Serif（サンセリフ体）【ゴシック体】
+//* -------------------------------------------------------
+// @mixin font-roboto {
+//   font-family: 'Roboto Flex', sans-serif;
+//   font-optical-sizing: auto;
+//   font-variation-settings:
+//     'slnt' 0,
+//     'wdth' 100,
+//     'GRAD' 0,
+//     'XOPQ' 96,
+//     'XTRA' 468,
+//     'YOPQ' 79,
+//     'YTAS' 750,
+//     'YTDE' -203,
+//     'YTFI' 738,
+//     'YTLC' 514,
+//     'YTUC' 712;
+// }
+// @mixin font-open-sans {
+//   font-family: 'Montserrat', sans-serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-montserrat {
+//   font-family: 'Open Sans', sans-serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-poppins {
+//   font-family: 'Poppins', sans-serif;
+// }
+// @mixin font-oswald {
+//   font-family: 'Oswald', sans-serif;
+//   font-optical-sizing: auto;
+// }
+@mixin font-nunito {
+  font-family: 'Nunito', sans-serif;
+  font-optical-sizing: auto;
+}
+// @mixin font-quicksand {
+//   font-family: 'Quicksand', sans-serif;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-rubik {
+//   font-family: 'Rubik', sans-serif;
+//   font-optical-sizing: auto;
+// }
+//* -------------------------------------------------------
+//* Display（装飾的なフォント）
+//* -------------------------------------------------------
+// @mixin font-anton {
+//   font-family: 'Anton', sans-serif;
+// }
+@mixin font-kaushan-script {
+  font-family: 'Kaushan Script', cursive;
+}
+//* -------------------------------------------------------
+//* Handwriting（手書き風フォント）
+//* -------------------------------------------------------
+//* -------------------------------------------------------
+//* Monospace（等幅フォント）
+//* -------------------------------------------------------
+// @mixin font-inconsolata {
+//   font-family: 'Inconsolata', monospace;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-source-code-pro {
+//   font-family: 'Source Code Pro', monospace;
+//   font-optical-sizing: auto;
+// }
+// @mixin font-fira-mono {
+//   font-family: 'Fira Mono', monospace;
+// }
+
+//* =====================================================================
+//* 比較テスト用
+//* =====================================================================
+// :root {
+//   --font-ja: 'Noto Sans JP', sans-serif;
+//   --font-ja: 'M PLUS 1', sans-serif;
+//   --font-ja: 'M PLUS 2', sans-serif;
+//   --font-ja: 'M PLUS Rounded 1c', sans-serif;
+//   --font-ja: 'Sawarabi Gothic', sans-serif;
+//   --font-ja: 'Zen Kaku Gothic New', sans-serif;
+
+//   --font-en: 'Anton', sans-serif;
+//   --font-en: 'Roboto Flex', sans-serif;
+//   --font-en: 'Open Sans', sans-serif;
+//   --font-en: 'Poppins', sans-serif;
+//   --font-en: 'Oswald', sans-serif;
+//   --font-en: 'Montserrat', sans-serif;
+
+//   --font-en: 'Quicksand', sans-serif;
+//   --font-en: 'Rubik', sans-serif;
+//   --font-en: 'Nunito', sans-serif;
+// }
+
+//* =====================================================================
+//* 適用
+//* =====================================================================
+@mixin font-ja {
+  @include font-m-plus-1;
+}
+@mixin font-en {
+  @include font-nunito;
+  letter-spacing: 0;
+}
+@mixin font-logo {
+  @include font-kaushan-script;
+}

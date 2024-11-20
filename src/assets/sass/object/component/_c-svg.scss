@@ -1,0 +1,48 @@
+@use 'global' as *;
+
+.c-svg-angle {
+  fill: currentColor;
+
+  // 方向
+  &.-up {
+    aspect-ratio: 12 / 7;
+    // aspect-ratio: 7 / 8;
+  }
+  &.-right {
+    aspect-ratio: 71 / 122;
+    // aspect-ratio: 5 / 8;
+  }
+  // 色
+  &.-white {
+    fill: rgb(var(--color-white));
+  }
+  &.-black {
+    fill: rgb(var(--color-black));
+  }
+}
+
+.c-svg-envelope {
+  aspect-ratio: 1 / 1;
+  fill: currentColor;
+
+  // 色
+  &.-white {
+    fill: rgb(var(--color-white));
+  }
+  &.-black {
+    fill: rgb(var(--color-black));
+  }
+}
+
+.c-svg-arrow-up-right-from-square {
+  aspect-ratio: 1 / 1;
+  fill: currentColor;
+
+  // 色
+  &.-white {
+    fill: rgb(var(--color-white));
+  }
+  &.-black {
+    fill: rgb(var(--color-black));
+  }
+}

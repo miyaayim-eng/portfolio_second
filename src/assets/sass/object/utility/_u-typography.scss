@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.u-font-ja {
+  @include font-ja;
+}
+.u-font-en {
+  @include font-en;
+}
+
+// Text Align
+.u-text-center {
+  text-align: center;
+}
+.u-text-right {
+  text-align: right;
+}
+
+// テキストカラー
+.u-text-accent {
+  color: rgb(var(--color-accent));
+}
+.u-text-white {
+  color: rgb(var(--color-white));
+}
+.u-text-black {
+  color: rgb(var(--color-black));
+}
+
+// その他
+.u-uppercase {
+  text-transform: uppercase;
+}

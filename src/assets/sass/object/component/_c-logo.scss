@@ -1,0 +1,25 @@
+@use 'global' as *;
+
+.c-logo {
+  display: grid;
+  @include font-logo;
+  letter-spacing: 0.1em;
+  // letter-spacing: 0;
+  line-height: 1.1;
+  font-kerning: none;
+  text-transform: uppercase;
+  user-select: none;
+  color: #fff;
+  text-shadow:
+    1px 1px var(--logo-shadow-outline-color),
+    1px -1px var(--logo-shadow-outline-color),
+    -1px 1px var(--logo-shadow-outline-color),
+    -1px -1px var(--logo-shadow-outline-color),
+    var(--logo-shadow-sharp);
+
+  &__text {
+    &::first-letter {
+      color: rgba(var(--color-accent));
+    }
+  }
+}

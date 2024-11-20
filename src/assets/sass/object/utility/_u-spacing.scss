@@ -1,0 +1,34 @@
+@use 'global' as *;
+
+// Margin
+.u-m-0 {
+  margin: 0;
+}
+.u-m-auto {
+  margin: auto;
+}
+.u-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.u-my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.u-mt-auto {
+  margin-top: auto;
+}
+.u-mr-auto {
+  margin-right: auto;
+}
+.u-mb-auto {
+  margin-bottom: auto;
+}
+.u-ml-auto {
+  margin-left: auto;
+}
+
+// Padding
+.u-p-0 {
+  padding: 0;
+}

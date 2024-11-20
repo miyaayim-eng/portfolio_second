@@ -1,0 +1,295 @@
+<% const ROOT = `${process.cwd()}/src/assets/ejs`; -%>
+<%# ページIDを入力する -%>
+<% pageId = 'works'; -%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%# メタデータ等 -%>
+  <%- include(`${ROOT}/_common/_head.ejs`) %>
+
+  <%# CSS -%>
+  <%- include(`${ROOT}/_common/_link.ejs`) %>
+  <%# swiper -%>
+  <link rel="stylesheet" href="/assets/js/main.css">
+
+  <%# JavaScripts -%>
+  <%- include(`${ROOT}/_common/_script.ejs`) %>
+</head>
+
+<body id="<%= pageId %>">
+
+  <%# 共通SVG画像 -%>
+  <%- include(`${ROOT}/_common/_svg.ejs`) %>
+
+  <%# ヘッダー -%>
+  <%- include(`${ROOT}/_common/_header.ejs`) %>
+
+  <%# メイン -%>
+  <main class="l-main">
+
+    <div class="c-page-title">
+      <h1 class="c-page-title__text js-anime-target" data-anime="show-underLine">works</h1>
+    </div>
+
+    <section class="p-works-archive">
+      <div class="c-inner-sm">
+        <ul class="p-works-archive__archive-list">
+
+          <li id="sf6-combo-hub" class="p-works-archive__archive-item">
+            <div class="p-works-archive__site-image">
+              <img src="/assets/img/works/sf6-combo-maker.webp" alt="SF6 Combo Maker（練習）" width="1920" height="1080">
+            </div>
+            <div class="p-works-archive__info">
+              <h2 class="p-works-archive__site-name">
+                <a href="https://www.sf6-combo-maker.com/" target="_blank" rel="noopener noreferrer" class="p-works-archive__site-name__link">
+                  <span class="p-works-archive__site-name__text">SF6 Combo Maker<span class="p-works-archive__site-name__small">（練習）</span></span>
+                  <svg class="p-works-archive__site-name__icon c-svg-arrow-up-right-from-square">
+                    <use href="#svg-arrow-up-right-from-square" />
+                  </svg>
+                </a>
+              </h2>
+              <div class="p-works-archive__skill">
+                <ul class="p-works-archive__skill-text-list">
+                  <li class="p-works-archive__skill-text">React</li>
+                  <li class="p-works-archive__skill-text">Next.js</li>
+                  <li class="p-works-archive__skill-text">Vercel</li>
+                  <li class="p-works-archive__skill-text">Supabase</li>
+                  <li class="p-works-archive__skill-text">Resend</li>
+                  <li class="p-works-archive__skill-text">Cloudflare</li>
+                </ul>
+                <ul class="p-works-archive__skill-image-list">
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_react.svg" alt="React" width="23" height="20">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_nextjs.svg" alt="Next.js" width="180" height="180">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_vercel.svg" alt="Vercel" width="1155" height="1000">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_supabase.svg" alt="Supabase" width="109" height="113">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_resend.svg" alt="Resend" width="600" height="600">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_cloudflare.webp" alt="Cloudflare" width="630" height="630">
+                  </li>
+                </ul>
+              </div>
+
+              <p class="p-works-archive__explanation">人気格闘ゲーム"StreetFighter6"のコンボレシピを共有できるサイトです。<br>ユーザーが自由にコンボレシピを投稿し、それをWebサイト上で表示する仕組みを実現しています。</p>
+
+              <div class="p-works-archive__detail-wrap js-accordion">
+                <p class="p-works-archive__more c-button -transparent-black -width-md">
+                  <button type="button" class="p-works-archive__more__button c-button__link">
+                    <span class="p-works-archive__more__text c-button__text u-uppercase">詳細を表示</span>
+                    <svg class="p-works-archive__more__arrow c-svg-angle -up c-button__arrow">
+                      <use href="#svg-angle-up" />
+                    </svg>
+                  </button>
+                </p>
+                <div class="p-works-archive__detail-content js-accordion-content">
+                  <dl class="p-works-archive__detail">
+                    <dt class="p-works-archive__detail__title">ページ</dt>
+                    <dd class="p-works-archive__detail__desc">サーバーサイドレンダリンク（SSR）、クライントサイドレンダリング（CSR）</dd>
+                    <dt class="p-works-archive__detail__title">ポイント</dt>
+                    <dd class="p-works-archive__detail__desc">アカウント登録にはメール認証を必要とし、サイト上でレシピのデータベース操作（挿入・更新・削除）ができるようになっています。<br>APIへのリクエスト回数を減らすため、一度にすべての情報を取得するように設計していますが、デメリットとしてページ表示に時間を要するようになってしまっています。<br>スタイル手法はCSS Modulesを採用しています。</dd>
+                    <dt class="p-works-archive__detail__title">備考</dt>
+                    <dd class="p-works-archive__detail__desc">アカウント情報、レシピ等のデータベースとしてSupabase、アカウント登録のメールサービス等にResend、DNS管理等にCloudflareを採用しています。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li id="youtube-bgm" class="p-works-archive__archive-item">
+            <div class="p-works-archive__site-image">
+              <img src="/assets/img/works/youtube_bgm.webp" alt="YouTube BGM（練習）" width="1920" height="1080">
+            </div>
+            <div class="p-works-archive__info">
+              <h2 class="p-works-archive__site-name">
+                <a href="https://study-react-vite-ts-tailwind-youtube-bgm.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-works-archive__site-name__link">
+                  <span class="p-works-archive__site-name__text">YouTube BGM<span class="p-works-archive__site-name__small">（練習）</span></span>
+                  <svg class="p-works-archive__site-name__icon c-svg-arrow-up-right-from-square">
+                    <use href="#svg-arrow-up-right-from-square" />
+                  </svg>
+                </a>
+              </h2>
+              <div class="p-works-archive__skill">
+                <ul class="p-works-archive__skill-text-list">
+                  <li class="p-works-archive__skill-text">React</li>
+                  <li class="p-works-archive__skill-text">Vite</li>
+                  <li class="p-works-archive__skill-text">Vercel</li>
+                </ul>
+                <ul class="p-works-archive__skill-image-list">
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_react.svg" alt="React" width="23" height="20">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_vite.svg" alt="Vite" width="410" height="404">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_vercel.svg" alt="Vercel" width="1155" height="1000">
+                  </li>
+                </ul>
+              </div>
+
+              <p class="p-works-archive__explanation">Reactの学習として作成し、フレームワーク（Next.js）を使用せずに開発を行うことを目的としています。<br>ビルドツールにはViteを採用しました。</p>
+
+              <div class="p-works-archive__detail-wrap js-accordion">
+                <p class="p-works-archive__more c-button -transparent-black -width-md">
+                  <button type="button" class="p-works-archive__more__button c-button__link">
+                    <span class="p-works-archive__more__text c-button__text u-uppercase">詳細を表示</span>
+                    <svg class="p-works-archive__more__arrow c-svg-angle -up c-button__arrow">
+                      <use href="#svg-angle-up" />
+                    </svg>
+                  </button>
+                </p>
+                <div class="p-works-archive__detail-content js-accordion-content">
+                  <dl class="p-works-archive__detail">
+                    <dt class="p-works-archive__detail__title">ページ</dt>
+                    <dd class="p-works-archive__detail__desc">クライアントサイドレンダリング（CSR）</dd>
+                    <dt class="p-works-archive__detail__title">ポイント</dt>
+                    <dd class="p-works-archive__detail__desc">APIへのリクエスト回数を減らすため、一度にすべての情報を取得するように設計しています。<br>コンポーネント設計にはアトミックデザイン、スタイル手法はTailwind CSSを採用しています。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li id="blog" class="p-works-archive__archive-item">
+            <div class="p-works-archive__site-image">
+              <img src="/assets/img/works/blog.webp" alt="ブログサイト（練習）" width="1920" height="1080">
+            </div>
+            <div class="p-works-archive__info">
+              <h2 class="p-works-archive__site-name">
+                <a href="https://study-react-nextjs-microcms-js-blog.vercel.app/" target="_blank" rel="noopener noreferrer" class="p-works-archive__site-name__link">
+                  <span class="p-works-archive__site-name__text">ブログサイト<span class="p-works-archive__site-name__small">（練習）</span></span>
+                  <svg class="p-works-archive__site-name__icon c-svg-arrow-up-right-from-square">
+                    <use href="#svg-arrow-up-right-from-square" />
+                  </svg>
+                </a>
+              </h2>
+              <div class="p-works-archive__skill">
+                <ul class="p-works-archive__skill-text-list">
+                  <li class="p-works-archive__skill-text">React</li>
+                  <li class="p-works-archive__skill-text">Next.js</li>
+                  <li class="p-works-archive__skill-text">Vercel</li>
+                  <li class="p-works-archive__skill-text">microCMS</li>
+                </ul>
+                <ul class="p-works-archive__skill-image-list">
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_react.svg" alt="React" width="23" height="20">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_nextjs.svg" alt="Next.js" width="180" height="180">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_vercel.svg" alt="Vercel" width="1155" height="1000">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_microcms.svg" alt="microCMS" width="200" height="200">
+                  </li>
+                </ul>
+              </div>
+
+              <p class="p-works-archive__explanation">ReactおよびNext.jsの学習として作成しました。<br>microCMSにて記事を投稿すると自動的にVercelでビルドを行うことで、静的サイト生成（SSG）を実現しています。</p>
+
+              <div class="p-works-archive__detail-wrap js-accordion">
+                <p class="p-works-archive__more c-button -transparent-black -width-md">
+                  <button type="button" class="p-works-archive__more__button c-button__link">
+                    <span class="p-works-archive__more__text c-button__text u-uppercase">詳細を表示</span>
+                    <svg class="p-works-archive__more__arrow c-svg-angle -up c-button__arrow">
+                      <use href="#svg-angle-up" />
+                    </svg>
+                  </button>
+                </p>
+                <div class="p-works-archive__detail-content js-accordion-content">
+                  <dl class="p-works-archive__detail">
+                    <dt class="p-works-archive__detail__title">ページ</dt>
+                    <dd class="p-works-archive__detail__desc">静的サイト生成（SSG）</dd>
+                    <dt class="p-works-archive__detail__title">ポイント</dt>
+                    <dd class="p-works-archive__detail__desc">カテゴリ、タグでの絞り込み機能、キーワード検索機能、詳細ページでの目次機能を実装しています。<br>ページの増減に合わせてサイトマップが自動更新されます。<br>スタイル手法はCSS Modulesを採用しています。</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li id="portfolio" class="p-works-archive__archive-item">
+            <div class="p-works-archive__site-image">
+              <img src="/assets/img/works/portfolio_second.webp" alt="yuya miyashita（当サイト）" width="1920" height="1080">
+            </div>
+            <div class="p-works-archive__info">
+              <h2 class="p-works-archive__site-name">
+                <span class="p-works-archive__site-name__link">
+                  <span class="p-works-archive__site-name__text -no-link"><span class="u-uppercase">yuya miyashita</span><span class="p-works-archive__site-name__small">（当サイト）</span></span>
+                </span>
+              </h2>
+              <div class="p-works-archive__skill">
+                <ul class="p-works-archive__skill-text-list">
+                  <li class="p-works-archive__skill-text">EJS<span class="p-works-archive__skill-text__small">(HTML)</span></li>
+                  <li class="p-works-archive__skill-text">Sass<span class="p-works-archive__skill-text__small">(CSS)</span></li>
+                  <li class="p-works-archive__skill-text">JavaScript</li>
+                  <li class="p-works-archive__skill-text">自作タスクランナー<span class="p-works-archive__skill-text__small">(npm-script)</span></li>
+                </ul>
+                <ul class="p-works-archive__skill-image-list">
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_ejs.svg" alt="EJS" width="28" height="16">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_sass.webp" alt="Sass" width="320" height="320">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_javascript.svg" alt="JavaScript" width="2500" height="2500">
+                  </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_npm.svg" alt="npm-script" width="16" height="16">
+                  </li>
+                </ul>
+              </div>
+
+              <p class="p-works-archive__explanation">当ポートフォリオサイトです、開発には自作タスクランナーを用いて制作しています。<br>コーポレートサイト制作で頻出するデザインをできるだけ取り入れ、閲覧してくださった方に自身のスキルが伝わりやすくなるように意識して当サイト制作を行いました。</p>
+
+              <div class="p-works-archive__detail-wrap js-accordion">
+                <p class="p-works-archive__more c-button -transparent-black -width-md">
+                  <button type="button" class="p-works-archive__more__button c-button__link">
+                    <span class="p-works-archive__more__text c-button__text u-uppercase">詳細を表示</span>
+                    <svg class="p-works-archive__more__arrow c-svg-angle -up c-button__arrow">
+                      <use href="#svg-angle-up" />
+                    </svg>
+                  </button>
+                </p>
+                <div class="p-works-archive__detail-content js-accordion-content">
+                  <dl class="p-works-archive__detail">
+                    <dt class="p-works-archive__detail__title">ページ設計</dt>
+                    <dd class="p-works-archive__detail__desc">全2ページ / 静的ページ</dd>
+                    <dt class="p-works-archive__detail__title">ポイント</dt>
+                    <dd class="p-works-archive__detail__desc">SP・PC表示へのレスポンシブ対応、CSS設計手法はFLOCCSを採用しています。</dd>
+                    <dt class="p-works-archive__detail__title">JavaScript</dt>
+                    <dd class="p-works-archive__detail__desc">ハンバーガーメニュー、スクロールアニメーション、ヘッダー可変、トップへ戻るボタン、アコーディオンメニュー、カルーセル（Swiper）</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <%# CONTACT -%>
+    <%- include(`${ROOT}/_component/_contact.ejs`) %>
+
+  </main>
+
+  <%# フッター -%>
+  <%- include(`${ROOT}/_common/_footer.ejs`) %>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@use 'global' as *;
+
+:root {
+  //* -------------------------------------------------------
+  //* 色
+  //* -------------------------------------------------------
+  // --color-accent: 131, 54, 56;
+  --color-accent: 128, 0, 0;
+  --color-white: 255, 255, 255;
+  --color-light-gray: 245, 245, 245;
+  --color-black: 35, 35, 35;
+  --color-border: rgba(var(--color-black), 0.2);
+
+  //* -------------------------------------------------------
+  //* フォント
+  //* -------------------------------------------------------
+  // --font-noto: 'Noto Sans JP', sans-serif;
+  // --font-anton: 'Anton', sans-serif;
+  // --font-roboto: 'Roboto Flex', sans-serif;
+  // --font-hyperspace: 'Hyperspace', sans-serif;
+
+  // --font-ja: var(--font-noto);
+  // --font-en: var(--font-anton);
+
+  //* -------------------------------------------------------
+  //* 装飾
+  //* -------------------------------------------------------
+  --border-solid: 1px solid var(--color-border);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --logo-shadow-outline-color: #333;
+  --logo-shadow-sharp: 2px 2px 2px rgba(0, 0, 0, 1);
+
+  //* -------------------------------------------------------
+  //* レイアウト
+  //* -------------------------------------------------------
+  // プロジェクト共通
+  --vw: calc(100vw - var(--scrollbarWidth));
+  --over-width: calc((var(--vw) - 100%) / 2);
+
+  // プロジェクト個別
+  --header-height: 104px;
+  --header-height-small: 80px;
+  --contents-width-sm: 960px;
+  --contents-width-md: 1200px;
+  --contents-width-lg: 1360px;
+
+  --body-paddingSide-variable: 5%;
+  --body-paddingSide-constant: 80px;
+  --body-paddingSide: var(--body-paddingSide-constant);
+  // --body-paddingSide: var(--body-paddingSide-variable);
+  @include mq(xl) {
+    --body-paddingSide-constant: 64px;
+  }
+  @include mq(lg) {
+    --body-paddingSide-constant: 48px;
+    --header-height: var(--header-height-small);
+  }
+  @include mq(md) {
+    --body-paddingSide-constant: 40px;
+  }
+  @include mq(xs) {
+    --body-paddingSide-constant: 32px;
+  }
+  @include mq(2xs) {
+    --body-paddingSide-constant: 24px;
+  }
+
+  //* -------------------------------------------------------
+  //* アニメーション
+  //* -------------------------------------------------------
+  --transition: 0.3s ease;
+}
+
+html {
+  overflow-y: scroll;
+  // scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  @include font-ja;
+  font-feature-settings: 'palt';
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+  // word-break: break-all;
+  min-height: 100dvh;
+}
+
+body.is-fixed {
+  --header-height: var(--header-height-small);
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+// [id] {
+//   scroll-margin-top: calc(var(--header-height));
+// }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: rgb(var(--color-accent));
+}

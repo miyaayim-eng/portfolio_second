@@ -1,0 +1,45 @@
+<% const href = (pageId !== 'home') ? '/' : '' -%>
+<header class="l-header">
+  <div class="p-header js-header">
+    <p class="p-header__logo-box">
+      <a href="/" class="p-header__logo c-logo">
+        <span class="p-header__text c-logo__text -top">yuya</span>
+        <span class="p-header__text c-logo__text -bottom">miyashita</span>
+      </a>
+    </p>
+
+    <nav class="p-header-nav js-menu-content">
+      <ul class="p-header-nav__list">
+        <li class="p-header-nav__item">
+          <a href="/" class="p-header-nav__link js-menu-link-target"><span class="p-header-nav__text u-uppercase">home</span></a>
+        </li>
+        <li class="p-header-nav__item">
+          <a href="/works/" class="p-header-nav__link js-menu-link-target"><span class="p-header-nav__text u-uppercase">works</span></a>
+        </li>
+        <li class="p-header-nav__item">
+          <a href="<%= href %>#about" class="p-header-nav__link"><span class="p-header-nav__text u-uppercase">about</span></a>
+        </li>
+        <li class="p-header-nav__item">
+          <a href="<%= href %>#skill" class="p-header-nav__link"><span class="p-header-nav__text u-uppercase">skill</span></a>
+        </li>
+        <li class="p-header-nav__item -contact">
+          <a href="#contact" class="p-header-nav__link -contact"><span class="p-header-nav__text -contact u-uppercase">contact</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="p-header-button">
+      <button type="button" class="p-header-button__menu-button js-menu-button" aria-label="メニューボタン">
+        <span class="p-header-button__overlay js-menu-overlay"></span>
+        <span class="p-header-button__content">
+          <span class="p-header-button__lines">
+            <span class="p-header-button__line"></span>
+            <span class="p-header-button__line"></span>
+            <span class="p-header-button__line"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+</header>

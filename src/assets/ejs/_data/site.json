@@ -1,0 +1,18 @@
+{
+  "siteInfo": {
+    "siteTitle": "YUYA MIYASHITA | WEB制作コーダーのミヤシタ ユウヤのポートフォリオサイトです。",
+    "siteDomain": "localhost:3000"
+  },
+  "pages": {
+    "home": {
+      "name": "home",
+      "pageTitle": "YUYA MIYASHITA | WEB制作コーダーのミヤシタ ユウヤのポートフォリオサイトです。",
+      "description": ""
+    },
+    "works": {
+      "name": "works",
+      "pageTitle": "WORKS | YUYA MIYASHITA",
+      "description": ""
+    }
+  }
+}
