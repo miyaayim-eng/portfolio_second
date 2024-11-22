@@ -10,7 +10,8 @@
   --color-white: 255, 255, 255;
   --color-light-gray: 245, 245, 245;
   --color-black: 35, 35, 35;
-  --color-border: rgba(var(--color-black), 0.2);
+  // --color-border: rgba(var(--color-black), 0.2);
+  --color-border: 174, 174, 174;
 
   //* -------------------------------------------------------
   //* フォント
@@ -26,7 +27,8 @@
   //* -------------------------------------------------------
   //* 装飾
   //* -------------------------------------------------------
-  --border-solid: 1px solid var(--color-border);
+  // --border-solid: 1px solid var(--color-border);
+  --border-solid: 1px solid rgb(var(--color-border));
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 16px;

@@ -9,31 +9,35 @@
     min-height: 56px;
     padding: 8px 24px;
     border: 2px solid currentColor;
+    // border: 2px solid;
     border-radius: var(--border-radius-sm);
-    box-shadow: var(--box-shadow);
+    // box-shadow: var(--box-shadow);
     transition: var(--transition);
     transition-property: color, border-color, background-color;
   }
   &.-transparent-black {
     #{$this}__link {
+      border-color: rgb(var(--color-black));
+      background-color: rgb(var(--color-black));
+      color: rgb(var(--color-white));
       @include hover {
-        color: rgb(var(--color-white));
-        border-color: rgb(var(--color-black));
-        background-color: rgb(var(--color-black));
+        color: rgb(var(--color-black));
+        background-color: rgb(var(--color-white));
       }
       &.is-active {
-        color: rgb(var(--color-white));
-        border-color: rgb(var(--color-black));
-        background-color: rgb(var(--color-black));
+        color: rgb(var(--color-black));
+        background-color: rgb(var(--color-white));
       }
     }
   }
   &.-transparent-white {
     #{$this}__link {
+      border-color: rgb(var(--color-white));
+      background-color: rgb(var(--color-white));
+      color: rgb(var(--color-black));
       @include hover {
-        color: rgb(var(--color-black));
-        border-color: rgb(var(--color-white));
-        background-color: rgb(var(--color-white));
+        color: rgb(var(--color-white));
+        background-color: rgb(var(--color-black));
       }
     }
   }

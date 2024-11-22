@@ -81,7 +81,7 @@
                 </ul>
               </div>
 
-              <p class="p-works-archive__explanation">人気格闘ゲーム"StreetFighter6"のコンボレシピを共有できるサイトです。<br>ユーザーが自由にコンボレシピを投稿し、それをWebサイト上で表示する仕組みを実現しています。</p>
+              <p class="p-works-archive__explanation">人気格闘ゲーム"StreetFighter6"のコンボレシピを共有できるサイトです。<br>ユーザーが自由にコンボレシピを投稿でき、それをWebサイト上で表示する仕組みを実現しています。</p>
 
               <div class="p-works-archive__detail-wrap js-accordion">
                 <p class="p-works-archive__more c-button -transparent-black -width-md">
@@ -97,9 +97,9 @@
                     <dt class="p-works-archive__detail__title">ページ</dt>
                     <dd class="p-works-archive__detail__desc">サーバーサイドレンダリンク（SSR）、クライントサイドレンダリング（CSR）</dd>
                     <dt class="p-works-archive__detail__title">ポイント</dt>
-                    <dd class="p-works-archive__detail__desc">アカウント登録にはメール認証を必要とし、サイト上でレシピのデータベース操作（挿入・更新・削除）ができるようになっています。<br>APIへのリクエスト回数を減らすため、一度にすべての情報を取得するように設計していますが、デメリットとしてページ表示に時間を要するようになってしまっています。<br>スタイル手法はCSS Modulesを採用しています。</dd>
+                    <dd class="p-works-archive__detail__desc">サイト上でレシピのデータベース操作（挿入・更新・削除）が可能となっています。<br>レシピ投稿にはアカウント登録を必要とし、アカウント登録にはSupabaseのメール認証を用いています。<br>APIへのリクエスト回数削減のため、一度にすべての情報を取得するように設計しています。そのため、ページ表示に少し時間を要しています。<br>スタイル手法はCSS Modulesを採用しています。</dd>
                     <dt class="p-works-archive__detail__title">備考</dt>
-                    <dd class="p-works-archive__detail__desc">アカウント情報、レシピ等のデータベースとしてSupabase、アカウント登録のメールサービス等にResend、DNS管理等にCloudflareを採用しています。</dd>
+                    <dd class="p-works-archive__detail__desc">フレームワークにNext.js、ホスティングサービスにVercel、レシピやアカウントのデータベースとしてSupabase、アカウント登録時のメール送信サービスにResend、DNS管理等にCloudflareのサービスを利用しています。</dd>
                   </dl>
                 </div>
               </div>
@@ -124,6 +124,7 @@
                   <li class="p-works-archive__skill-text">React</li>
                   <li class="p-works-archive__skill-text">Vite</li>
                   <li class="p-works-archive__skill-text">Vercel</li>
+                  <li class="p-works-archive__skill-text">Tailwind CSS</li>
                 </ul>
                 <ul class="p-works-archive__skill-image-list">
                   <li class="p-works-archive__skill-image">
@@ -135,10 +136,13 @@
                   <li class="p-works-archive__skill-image">
                     <img src="/assets/img/common/skill_vercel.svg" alt="Vercel" width="1155" height="1000">
                   </li>
+                  <li class="p-works-archive__skill-image">
+                    <img src="/assets/img/common/skill_tailwind.svg" alt="Tailwind CSS" width="54" height="33">
+                  </li>
                 </ul>
               </div>
 
-              <p class="p-works-archive__explanation">Reactの学習として作成し、フレームワーク（Next.js）を使用せずに開発を行うことを目的としています。<br>ビルドツールにはViteを採用しました。</p>
+              <p class="p-works-archive__explanation">勉強のお供などに使用するYouTubeの作業BMGをまとめたサイトです。<br>React学習にて、フレームワーク（Next.js）を用いない開発を経験するために作成しました。</p>
 
               <div class="p-works-archive__detail-wrap js-accordion">
                 <p class="p-works-archive__more c-button -transparent-black -width-md">
@@ -154,7 +158,9 @@
                     <dt class="p-works-archive__detail__title">ページ</dt>
                     <dd class="p-works-archive__detail__desc">クライアントサイドレンダリング（CSR）</dd>
                     <dt class="p-works-archive__detail__title">ポイント</dt>
-                    <dd class="p-works-archive__detail__desc">APIへのリクエスト回数を減らすため、一度にすべての情報を取得するように設計しています。<br>コンポーネント設計にはアトミックデザイン、スタイル手法はTailwind CSSを採用しています。</dd>
+                    <dd class="p-works-archive__detail__desc">APIへのリクエスト回数削減のため、一度にすべての情報を取得するように設計しています。<br>コンポーネント設計にはアトミックデザイン、スタイル手法はTailwind CSSを採用しています。</dd>
+                    <dt class="p-works-archive__detail__title">備考</dt>
+                    <dd class="p-works-archive__detail__desc">ビルドツールにVite、ホスティングサービスにVercelを利用しています。</dd>
                   </dl>
                 </div>
               </div>
@@ -197,7 +203,7 @@
                 </ul>
               </div>
 
-              <p class="p-works-archive__explanation">ReactおよびNext.jsの学習として作成しました。<br>microCMSにて記事を投稿すると自動的にVercelでビルドを行うことで、静的サイト生成（SSG）を実現しています。</p>
+              <p class="p-works-archive__explanation">個人ブログとしても使用可能なブログサイトをReactで作成しました。<br>microCMSにて記事を投稿すると自動的にVercelでビルドを行いファイル生成することで、静的サイト生成（SSG）を実現しています。</p>
 
               <div class="p-works-archive__detail-wrap js-accordion">
                 <p class="p-works-archive__more c-button -transparent-black -width-md">
@@ -214,6 +220,8 @@
                     <dd class="p-works-archive__detail__desc">静的サイト生成（SSG）</dd>
                     <dt class="p-works-archive__detail__title">ポイント</dt>
                     <dd class="p-works-archive__detail__desc">カテゴリ、タグでの絞り込み機能、キーワード検索機能、詳細ページでの目次機能を実装しています。<br>ページの増減に合わせてサイトマップが自動更新されます。<br>スタイル手法はCSS Modulesを採用しています。</dd>
+                    <dt class="p-works-archive__detail__title">備考</dt>
+                    <dd class="p-works-archive__detail__desc">フレームワークにNext.js、ホスティングサービスにVercel、CMSにmicroCMSを利用しています。</dd>
                   </dl>
                 </div>
               </div>
@@ -253,7 +261,7 @@
                 </ul>
               </div>
 
-              <p class="p-works-archive__explanation">当ポートフォリオサイトです、開発には自作タスクランナーを用いて制作しています。<br>コーポレートサイト制作で頻出するデザインをできるだけ取り入れ、閲覧してくださった方に自身のスキルが伝わりやすくなるように意識して当サイト制作を行いました。</p>
+              <p class="p-works-archive__explanation">当ポートフォリオサイトです。<br>コーポレートサイト制作で頻出するデザインをできるだけ取り入れ、閲覧してくださった方に自身のスキルが伝わりやすくなるように意識して当サイト制作を行いました。</p>
 
               <div class="p-works-archive__detail-wrap js-accordion">
                 <p class="p-works-archive__more c-button -transparent-black -width-md">
@@ -272,6 +280,8 @@
                     <dd class="p-works-archive__detail__desc">SP・PC表示へのレスポンシブ対応、CSS設計手法はFLOCCSを採用しています。</dd>
                     <dt class="p-works-archive__detail__title">JavaScript</dt>
                     <dd class="p-works-archive__detail__desc">ハンバーガーメニュー、スクロールアニメーション、ヘッダー可変、トップへ戻るボタン、アコーディオンメニュー、カルーセル（Swiper）</dd>
+                    <dt class="p-works-archive__detail__title">備考</dt>
+                    <dd class="p-works-archive__detail__desc">自作したタスクランナーにて、HTMLファイル生成（EJS）、CSSファイル生成（Sass）、画像圧縮等を行っています。</dd>
                   </dl>
                 </div>
               </div>

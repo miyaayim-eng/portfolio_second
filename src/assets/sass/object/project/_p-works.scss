@@ -23,7 +23,6 @@
     border-radius: var(--border-radius-md);
     border: var(--border-solid);
     overflow: hidden;
-    // min-height: 250px;
     max-width: 100%;
     box-shadow: var(--box-shadow);
 
@@ -80,10 +79,6 @@
     &__small {
       font-size: 0.8em;
       display: inline-block;
-
-      @include mq(2xs) {
-        // display: block;
-      }
     }
 
     &__icon {
@@ -147,10 +142,7 @@
 
   &__explanation {
     font-size: to-rem(15);
-    // padding: 8px 0;
     margin-top: 32px;
-    // border-top: var(--border-solid);
-    // border-bottom: var(--border-solid);
     @include mq(md) {
       font-size: to-rem(14);
       margin-top: 24px;
@@ -160,6 +152,7 @@
   &__more {
     $this: &;
     margin-top: 32px;
+    margin-bottom: 16px;
 
     @include mq(md) {
       margin-top: 24px;
@@ -191,7 +184,8 @@
     overflow: hidden;
     display: grid;
     grid-template-rows: minmax(0, 1fr);
-    transition: grid-template-rows 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    // transition: grid-template-rows 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: grid-template-rows 0.3s ease;
 
     &:not(.is-show) {
       grid-template-rows: minmax(0, 0fr);
@@ -204,26 +198,27 @@
 
     display: grid;
     grid-template-columns: auto 1fr;
-    padding-bottom: 16px;
-    margin-top: 32px;
+    padding-inline: 32px;
+    border-radius: var(--border-radius-md);
+    background-color: #f5f5f5;
 
     @include mq(md) {
       --padding-x: 16px;
       --padding-y: 16px;
       grid-template-columns: 1fr;
+      padding-inline: 24px;
     }
 
     @include mq(2xs) {
       --padding-x: 8px;
       --padding-y: 8px;
+      padding-inline: 16px;
     }
 
-    &__title,
-    &__desc {
+    &__title:not(:first-of-type),
+    &__desc:not(:first-of-type) {
       border-top: var(--border-solid);
-      &:last-of-type {
-        border-bottom: var(--border-solid);
-      }
+      border-color: rgb(174, 174, 174);
     }
 
     &__title {
@@ -231,15 +226,12 @@
       padding-left: var(--padding-x);
       padding-right: 56px;
       font-weight: 700;
+      font-size: to-rem(15);
 
       @include mq(md) {
         padding-inline: var(--padding-x);
-        padding-bottom: calc(var(--padding-y) / 2);
-        font-size: to-rem(15);
-
-        &:last-of-type {
-          border-bottom: none;
-        }
+        padding-bottom: calc(var(--padding-y) / 4);
+        font-size: to-rem(14);
       }
     }
     &__desc {
@@ -249,9 +241,12 @@
 
       @include mq(md) {
         padding-inline: var(--padding-x);
-        padding-top: calc(var(--padding-y) / 2);
-        border-top: none;
+        padding-top: calc(var(--padding-y) / 4);
         font-size: to-rem(14);
+
+        &:not(:first-of-type) {
+          border-top: none;
+        }
       }
     }
   }
