@@ -7,6 +7,7 @@
   //* -------------------------------------------------------
   // --color-accent: 131, 54, 56;
   --color-accent: 128, 0, 0;
+  --color-focus: 247, 159, 1;
   --color-white: 255, 255, 255;
   --color-light-gray: 245, 245, 245;
   --color-black: 35, 35, 35;
@@ -109,5 +110,5 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline-color: rgb(var(--color-accent));
+  outline-color: rgb(var(--color-focus));
 }
